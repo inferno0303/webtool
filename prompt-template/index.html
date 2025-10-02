@@ -273,24 +273,6 @@
             };
         }
     }).mount('#app');
-
-    document.addEventListener('DOMContentLoaded', () => {
-        // 获取页面上所有的 textarea 元素
-        document.querySelectorAll('textarea').forEach(textarea => {
-            // 为每个 textarea 添加 input 事件监听器
-            textarea.addEventListener('input', () => {
-                textarea.style.height = 'auto'; // 重置高度
-                textarea.style.height = textarea.scrollHeight + 'px'; // 设置新高度
-            });
-
-            // 页面加载时，如果 textarea 中已经有内容，也自动调整高度
-            if (textarea.scrollHeight > textarea.clientHeight) {
-                textarea.style.height = 'auto';
-                textarea.style.height = textarea.scrollHeight + 'px';
-            }
-        });
-    });
-
 </script>
 </body>
 </html>
